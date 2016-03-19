@@ -1,0 +1,15 @@
+[core]
+	bare = true
+	filemode = false
+	symlinks = false
+	ignorecase = true
+[core]
+	repositoryformatversion = 0
+[remote "origin"]
+	url = https://github.com/jagnyadatta/empservice.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "jagnya"]
+	url = https://github.com/jagnyadatta/empservice.git
+	fetch = +refs/heads/*:refs/remotes/jagnya/*
+	tagopt = --no-tags
+	pushurl = https://github.com/jagnyadatta/empservice.git
