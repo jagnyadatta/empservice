@@ -1,13 +1,13 @@
 package com.self.dao.query.constants;
 
 public class EmpQueryConstants {
-	public final static String FETCH_ALL_EMPLOYEE_COUNT="select count(*) from persons";
-	public final static String FETCH_ALL_EMPLOYEE="select * from persons";
-	public final static String FETCH_ALL_EMPLOYEE_BY_FNAME="select * from persons where firstname=?";
-	public final static String FETCH_ALL_EMPLOYEE_BY_LFNAME="select * from persons where lastname=?";
-	public final static String FETCH_ALL_EMPLOYEE_ID="select * from persons where PERSONID=?";
-	public final static String FETCH_ALL_EMPLOYEE_ADDRESS="select * from persons where ADDRESS=?";
-	public final static String FETCH_ALL_EMPLOYEE_CITY="select * from persons where  CITY=?";
+	public final static String FETCH_ALL_EMPLOYEE_COUNT="select count(*) from emp";
+	public final static String FETCH_ALL_EMPLOYEE="select * from emp";
+	public final static String FETCH_ALL_EMPLOYEE_BY_ENAME="select * from emp where ename=?";
+
+	public final static String FETCH_ALL_EMPLOYEE_DEPTNO="select * from emp where deptno=?";
+	public final static String FETCH_ALL_EMPLOYEE_CITY="select * from emp where  CITY=?";
+	public static final String FETCH_ALL_EMPLOYEE_EMPNO = "select * from emp where empno=?";
 
 
 }

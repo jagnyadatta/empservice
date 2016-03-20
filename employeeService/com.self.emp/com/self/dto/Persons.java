@@ -1,46 +1,70 @@
 package com.self.dto;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class Persons {
-	  @Id
-	private int personID ;
-	private String lastName ;
-	private String firstName ;
-	private String address ;
-	private String 	city ;
-	public int getPersonID() {
-		return personID;
+	private int empno;
+	private String ename;
+	private String job;
+	private String mgr;
+	private Date hiredate;
+	private double sal;
+	private double comm;
+	private int depto;
+	public int getEmpno() {
+		return empno;
 	}
-	public void setPersonID(int personID) {
-		this.personID = personID;
+	public void setEmpno(int empno) {
+		this.empno = empno;
 	}
-	public String getLastName() {
-		return lastName;
+	public String getEname() {
+		return ename;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setEname(String ename) {
+		this.ename = ename;
 	}
-	public String getFirstName() {
-		return firstName;
+	public String getJob() {
+		return job;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setJob(String job) {
+		this.job = job;
 	}
-	public String getAddress() {
-		return address;
+	public String getMgr() {
+		return mgr;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setMgr(String mgr) {
+		this.mgr = mgr;
 	}
-	public String getCity() {
-		return city;
+	public Date getHiredate() {
+		return hiredate;
 	}
-	public void setCity(String city) {
-		this.city = city;
+	public void setHiredate(Date hiredate) {
+		this.hiredate = hiredate;
 	}
+	public double getSal() {
+		return sal;
+	}
+	public void setSal(double sal) {
+		this.sal = sal;
+	}
+	public double getComm() {
+		return comm;
+	}
+	public void setComm(double comm) {
+		this.comm = comm;
+	}
+	public int getDepto() {
+		return depto;
+	}
+	public void setDepto(int depto) {
+		this.depto = depto;
+	}
+	
+	
 	
 	
 

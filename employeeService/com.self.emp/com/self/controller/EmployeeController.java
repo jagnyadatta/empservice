@@ -16,10 +16,10 @@ import com.self.dto.Persons;
 public class EmployeeController {
 	@Autowired
 	private EmployeDaoImpl emp;
-	@RequestMapping("/hello")
+	@RequestMapping("/emps/no")
     public Integer message(String player) {
  
-        return  emp.fethAllEmployee();
+        return  emp.fethAllEmpCount();
        
     }
 
