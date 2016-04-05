@@ -7,6 +7,7 @@ import javax.servlet.ServletRegistration;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
@@ -19,6 +20,7 @@ public class ControllerInitializer implements WebApplicationInitializer {
         AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
         ctx.register(ConfigurationClass.class);
         ctx.setServletContext(container);
+        container.addListener(new ContextLoaderListener(ctx));
  
         ServletRegistration.Dynamic servlet = container.addServlet(
                 "dispatcher", new DispatcherServlet(ctx));
