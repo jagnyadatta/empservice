@@ -19,6 +19,10 @@ public class EmployeDaoImpl {
 	public Integer fethAllEmpCount() {
 		return jdbcTemplate.queryForInt(EmpQueryConstants.FETCH_ALL_EMPLOYEE_COUNT);
 	}
+	
+	public List<Persons> fethAllEmpDetails() {
+		return jdbcTemplate.query(EmpQueryConstants.FETCH_ALL_EMPLOYEE,new PersonsMapper());
+	}
 
 	public List<Persons> fetchAllEmployeeByEmpno(String empno) {
 		return jdbcTemplate.query(EmpQueryConstants.FETCH_ALL_EMPLOYEE_EMPNO, new Object[] {  empno  },
@@ -26,13 +30,19 @@ public class EmployeDaoImpl {
 	}
 
 	public List<Persons> fetchAllEmployeeByEName(String fname) {
-		return jdbcTemplate.query(EmpQueryConstants.FETCH_ALL_EMPLOYEE_BY_ENAME, new Object[] { '%' + fname + '%' },
+		System.out.println("fname "+fname.toUpperCase() +EmpQueryConstants.FETCH_ALL_EMPLOYEE_BY_ENAME);
+		return jdbcTemplate.query(EmpQueryConstants.FETCH_ALL_EMPLOYEE_BY_ENAME, new Object[] { "%" + fname.toUpperCase() + "%"},
 				new PersonsMapper());
 
 	}
 
 	public List<Persons> fetchAllEmployeeByLastDeptNo(String deptno) {
 		return jdbcTemplate.query(EmpQueryConstants.FETCH_ALL_EMPLOYEE_DEPTNO, new Object[] { deptno  },
+				new PersonsMapper());
+
+	}
+	public List<Persons> fetchAllEmployeeByLastJob(String job) {
+		return jdbcTemplate.query(EmpQueryConstants.FETCH_ALL_EMPLOYEE_JOB, new Object[] {"%" + job.toUpperCase() + "%" },
 				new PersonsMapper());
 
 	}
